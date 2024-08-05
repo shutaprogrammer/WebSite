@@ -1795,7 +1795,7 @@ li{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top:-18px;
+        margin-top:0px;
     }
     
     .shoukaibun>.shoukai2{
