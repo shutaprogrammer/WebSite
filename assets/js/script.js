@@ -47,6 +47,7 @@ function showContent(city) {
 
 // ページ読み込み時にハッシュをチェックして表示
 window.addEventListener("load", function () {
+  console.log("load");
 var hash = window.location.hash.substring(1);
   if (hash) {
     showContent(hash);
@@ -74,12 +75,13 @@ function bokashi0(machi) {
   };
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", function () {
   console.log("DOMContentLoadedしました");
   function profileShuta() {
     const profileX = document.getElementById("introduction");
     const buttonX = document.querySelector(".button");
     buttonX.addEventListener("click", function () {
+      console.log("softbank");
       if (!profileX.classList.contains("active")) {
         profileX.classList.add("active");
       } else {

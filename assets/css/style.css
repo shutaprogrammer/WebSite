@@ -1699,14 +1699,15 @@ li{
     
     .profile2{
         width:40%;
+        margin-top:25px;
     }
     
     .profile2>h2{
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
     
     .shoukaibun>.shoukai1{
-        margin-top:-5px;
+        margin-top:5px;
     }
     
     .shoukaibun>.shoukai2{
@@ -1891,6 +1892,7 @@ li{
     bottom: 30px;
     right: 15px;
 }
+
 .pagetop a {
     display: block;
     background-color: #ccc;
