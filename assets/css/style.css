@@ -1773,7 +1773,7 @@ li{
     .profilePicture>img{
         height:150px;
         border-radius: 50%;
-        margin-top:-20px;
+        margin-top:20px;
     }
     
     .profile1>.name{
