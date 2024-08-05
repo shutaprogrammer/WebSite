@@ -1,0 +1,1924 @@
+/*ブラウザに元々あるpaddingとmarginを0にしている*/
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: "Hiragino Sans","Meiro UI",sans-serif;
+    }
+
+.top {
+    background-image: url(../img/kyoto/嵐山元禄山町.jpg);
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    animation: image_anime 45s ease 9s infinite; 
+    /* ①animation-name, ②animation-duration, ③animation-timing-function, ④animation-delay, ⑤animation-iteration-count  */
+    /* アニメーションを設定*/
+    animation-fill-mode:  none;
+}
+
+@keyframes image_anime {
+    20% {
+        background-image: url(../img/nara/唐招提寺.jpg);
+    }
+    40% {
+        background-image: url(../img/kanazawa/ひがし茶屋街.jpg);
+       }
+    60% {
+        background-image: url(../img/hiroshima/マツダスタジアム2.jpg);
+    }
+    80% {
+        background-image: url(../img/wakayama/熊野本宮大社2.jpg);
+    }
+}
+
+.top>img{
+    height:200px;
+    position: relative;
+    bottom: 200px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:1030px){
+    .top{
+        background-size:100vw 100vh;
+    }
+    .top>img{
+        height:180px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .top{
+    background-size:100vw 100vh;
+}   
+    .top>img{
+        height:120px;
+    }
+
+}
+
+/*ここまでトップ画像*/
+
+.area{
+    height:300px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.areaIntroduction{
+    margin-top:20px;
+}
+
+.line1{
+    background-image: url(../img/linesImg/b_simple_114_1L.jpg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    min-height: 10px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/*差し替え用*/
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.bokashi.choice {
+    filter: opacity(0.4);
+}
+
+.bokashi {
+    position:relative;
+}
+
+.bokashi:hover{
+    top:-7px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.7);
+    transition:0.3s;
+}
+/*差し替え用ここまで*/
+#circle8{
+    width:70%;
+    margin:0 auto;
+}
+
+#circleAll8{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#circleKyoto2>button>img{
+    height: 120px;
+    border-radius: 50%;
+}
+
+#circleKyoto2>p{
+    font-size: 22px;
+}
+
+#circleNara2>button>img{
+    height: 120px;
+    border-radius: 50%;
+}
+
+#circleNara2>p{
+    font-size: 22px;
+}
+
+#circleKanazawa2>button>img{
+    height: 120px;
+    border-radius: 50%;
+}
+
+#circleKanazawa2>p{
+    font-size: 22px;
+}
+
+#circleHiroshima2>button>img{
+    height: 120px;
+    border-radius: 50%;
+}
+
+#circleHiroshima2>p{
+    font-size: 22px;
+}
+
+#circleWakayama2>button>img{
+    height: 120px;
+    border-radius: 50%;
+}
+
+#circleWakayama2>p{
+    font-size: 22px;
+}
+
+@media screen and (max-width:1030px){
+    #circle8{
+        width:80%;
+    }
+    
+    #circleKyoto2>button>img{
+        height: 110px;
+    }
+    
+    #circleKyoto2>p{
+        font-size: 20;
+    }
+    
+    #circleNara2>button>img{
+        height: 110px;
+    }
+    
+    #circleNara2>p{
+        font-size: 20px;
+    }
+    
+    #circleKanazawa2>button>img{
+        height: 110px;
+    }
+    
+    #circleKanazawa2>p{
+        font-size: 20px;
+    }
+    
+    #circleHiroshima2>button>img{
+        height: 110px;
+    }
+    
+    #circleHiroshima2>p{
+        font-size: 20px;
+    }
+    
+    #circleWakayama2>button>img{
+        height: 110px;
+    }
+    
+    #circleWakayama2>p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .area{
+        font-size: 25px;
+    }
+
+    #circle8{
+        width:90%;
+    }
+    
+    #circleKyoto2>button>img{
+        height: 60px;
+    }
+    
+    #circleKyoto2>p{
+        font-size: 13px;
+    }
+    
+    #circleNara2>button>img{
+        height: 60px;
+    }
+    
+    #circleNara2>p{
+        font-size: 13px;
+    }
+    
+    #circleKanazawa2>button>img{
+        height: 60px;
+    }
+    
+    #circleKanazawa2>p{
+        font-size: 13px;
+    }
+    
+    #circleHiroshima2>button>img{
+        height: 60px;
+    }
+    
+    #circleHiroshima2>p{
+        font-size: 13px;
+    }
+    
+    #circleWakayama2>button>img{
+        height: 60px;
+    }
+    
+    #circleWakayama2>p{
+        font-size: 13px;
+    }
+}
+/*エリア紹介ここまで*/
+
+#kyoto-content{
+    font-size: 25px;
+}
+
+.kyoto_map {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width:90vw;
+    margin:0 auto;
+}
+
+.kyoto_map>img{
+    height:400px;
+}
+
+.favorite1>h1{
+    margin-bottom: 20px;
+}
+
+.kyotoImg1>img{
+    height:500px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.kyotoImg1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    width:90%;
+    margin:0 auto;
+}
+
+.descriptionKyoto1{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.contentsKyoto2>img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsKyoto2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionKyoto2{
+    width: 50%;
+    margin-left: 2%;
+}
+
+
+.contentsKyoto3 > img{
+    height:300px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsKyoto3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionKyoto3{
+    width: 50%;
+    margin-right: 2%;
+}
+
+@media screen and (max-width:1030px){
+    #kyoto-content{
+        font-size: 20px;
+    }
+    
+    .kyoto_map>img{
+        height:350px;
+    }
+    
+    .favorite1>h1{
+        margin-bottom: 20px;
+        font-size:32px;
+    }
+    
+    .kyotoImg1>img{
+        height:400px;
+    }
+    
+    .contentsKyoto2 > img{
+        height:350px;
+    }
+    
+    .contentsKyoto3 > img{
+        height:250px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .favorite1>h1{
+        font-size: 20px;
+        display: block flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .kyoto_map {
+        flex-direction: column;
+        width:100vw;
+        margin-top:-75px;
+    }
+    
+    .kyoto_map>img{
+        height:200px;
+    }
+    
+    .descriptionKyoto0{
+        font-size:12px;
+        margin:0 auto;
+        width:90%;
+    }
+
+    .kyotoImg1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .kyotoImg1>img{
+        height:200px;
+        margin-top: 20px;
+        order:1;
+    }
+
+    .kyotoImg1>p{
+        order:2;
+    }
+    
+    .descriptionKyoto1{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsKyoto2 > img{
+        height:200px;
+    }
+    
+    .contentsKyoto2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionKyoto2{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsKyoto3 > img{
+        height:160px;
+        order:1;
+    }
+    
+    .contentsKyoto3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionKyoto3{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+        order:2;
+    }
+}
+/*京都内容ここまで*/
+
+#nara-content{
+    font-size: 25px;
+}
+
+.nara_map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width:90%;
+    margin:0 auto;
+}
+
+.nara_map>img{
+    height:400px;
+}
+
+.favorite2>h1{
+    margin-bottom: 20px;
+}
+
+.nara_map>p {
+    margin-left:5%;
+}
+
+.contentsNara1 > img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsNara1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin:40px auto 0 auto;
+}
+
+.descriptionNara1{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.contentsNara2 > img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsNara2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionNara2{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.contentsNara3 > img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsNara3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionNara3{
+    width: 50%;
+    margin-right: 2%;
+}
+
+@media screen and (max-width:1030px){
+    #nara-content{
+        font-size: 22px;
+    }
+    
+    .nara_map>img{
+        height:350px;
+    }
+    
+    .favorite2>h1{
+        font-size:32px;
+    }
+    
+    .contentsNara1 > img{
+        height:300px;
+    }
+    
+    .descriptionNara1{
+        width: 50%;
+        margin-right: 2%;
+        
+    }
+    
+    .contentsNara2 > img{
+        height:400px;
+        border-radius: 5%;
+        box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+    }
+    
+    .contentsNara2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    
+    .descriptionNara2{
+        width: 50%;
+        margin-left: 2%;
+    }
+    
+    .contentsNara3 > img{
+        height:300px;
+        border-radius: 5%;
+        box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+    }
+    
+    .contentsNara3{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    
+    .descriptionNara3{
+        width: 50%;
+        margin-right: 2%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .favorite2>h1{
+        font-size: 20px;
+        display: block flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .nara_map {
+        flex-direction: column;
+        width:100vw;
+        margin-top:-75px;
+    }
+    
+    .nara_map>img{
+        height:200px;
+    }
+    
+    .descriptionNara0{
+        font-size:12px;
+        margin:0 auto;
+        width:90%;
+    }
+
+    .contentsNara1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .contentsNara1>img{
+        height:200px;
+        margin-top: 20px;
+        order:1;
+    }
+
+    .contentsNara1>p{
+        order:2;
+    }
+    
+    .descriptionNara1{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsNara2 > img{
+        height:200px;
+    }
+    
+    .contentsNara2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionNara2{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsNara3 > img{
+        height:160px;
+        order:1;
+    }
+    
+    .contentsNara3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionNara3{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+        order:2;
+    }
+}
+
+/*奈良内容ここまで*/
+
+#kanazawa-content{
+    font-size: 25px;
+}
+
+.kanazawa_map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width:90%;
+    margin:0 auto;
+}
+
+.kanazawa_map>img{
+    height:400px;
+}
+
+.favorite3>h1{
+    margin-bottom: 20px;
+}
+
+.contentsKanazawa1 > img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsKanazawa1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin:40px auto 0 auto;
+}
+
+.descriptionKanazawa1{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.contentsKanazawa2 > img{
+    height:300px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsKanazawa2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionKanazawa2{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.contentsKanazawa3 > img{
+    height:300px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsKanazawa3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionKanazawa3{
+    width: 50%;
+    margin-right: 2%;
+}
+
+@media screen and (max-width:1030px)  {
+    #kanazawa-content{
+        font-size: 20px;
+    }
+    
+    .kanazawa_map>img{
+        height:350px;
+    }
+    
+    .contentsKanazawa1 > img{
+        height:300px;
+    }
+    
+    .contentsKanazawa2 > img{
+        height:240px;
+    }
+    
+    .descriptionKanazawa2{
+        width: 50%;
+        margin-left: 2%;
+    }
+    
+    .contentsKanazawa3 > img{
+        height:230px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .favorite3>h1{
+        font-size: 20px;
+        display: block flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .kanazawa_map {
+        flex-direction: column;
+        width:100vw;
+        margin-top:-75px;
+    }
+    
+    .kanazawa_map>img{
+        height:200px;
+    }
+    
+    .descriptionKanazawa0{
+        font-size:12px;
+        margin:0 auto;
+        width:90%;
+    }
+
+    .contentsKanazawa1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .contentsKanazawa1>img{
+        height:200px;
+        order:1;
+    }
+
+    .contentsKanazawa1>p{
+        order:2;
+    }
+    
+    .descriptionKanazawa1{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsKanazawa2 > img{
+        height:180px;
+        margin-top: 20px;
+    }
+    
+    .contentsKanazawa2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionKanazawa2{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsKanazawa3 > img{
+        height:180px;
+        margin-top: 20px;
+        order:1;
+    }
+    
+    .contentsKanazawa3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionKanazawa3{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+        order:2;
+    }
+}
+/*金沢内容ここまで*/
+
+#hiroshima-content{
+    font-size: 25px;
+}
+
+.hiroshima_map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width:90%;
+    margin: 0 auto;
+}
+
+.hiroshima_map>img{
+    height:400px;
+}
+
+.favorite4>h1{
+    margin-bottom: 20px;
+}
+
+.contentsHiroshima1 > img{
+    height:300px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsHiroshima1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionHiroshima1{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.contentsHiroshima2 > img{
+    height:450px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsHiroshima2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionHiroshima2{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.contentsHiroshima3 > img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsHiroshima3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionHiroshima3{
+    width: 50%;
+    margin-right: 2%;
+}
+
+@media screen and (max-width:1030px){
+    #hiroshima-content{
+        font-size: 20px;
+    }
+    
+    .hiroshima_map>img{
+        height:350px;
+    }
+    
+    .contentsHiroshima1 > img{
+        height:240px;
+    }
+    
+    .contentsHiroshima2 > img{
+        height:350px;
+    }
+    
+    .contentsHiroshima3 > img{
+        height:300px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .favorite4>h1{
+        font-size: 20px;
+        display: block flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .hiroshima_map {
+        flex-direction: column;
+        width:100vw;
+        margin-top:-75px;
+    }
+    
+    .hiroshima_map>img{
+        height:200px;
+    }
+    
+    .descriptionHiroshima0{
+        font-size:12px;
+        margin:0 auto;
+        width:90%;
+    }
+
+    .contentsHiroshima1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .contentsHiroshima1>img{
+        height:150px;
+        order:1;
+    }
+
+    .contentsHiroshima1>p{
+        order:2;
+    }
+    
+    .descriptionHiroshima1{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsHiroshima2 > img{
+        height:180px;
+        margin-top: 20px;
+    }
+    
+    .contentsHiroshima2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionHiroshima2{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsHiroshima3 > img{
+        height:180px;
+        margin-top: 20px;
+        order:1;
+    }
+    
+    .contentsHiroshima3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionHiroshima3{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+        order:2;
+    }
+}
+/*広島内容ここまで*/
+
+#wakayama-content{
+    font-size: 25px;
+}
+
+.wakayama_map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width:90%;
+    margin:40px auto 0 auto;
+}
+
+.wakayama_map>img{
+    height: 400px;
+}
+
+.favorite5>h1{
+    margin-bottom: 20px;
+}
+
+.contentsWakayama1 > img{
+    height:500px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsWakayama1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionWakayama1{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.contentsWakayama2 > img{
+    height:400px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsWakayama2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionWakayama2{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.contentsWakayama3 > img{
+    height:500px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
+.contentsWakayama3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionWakayama3{
+    width: 50%;
+    margin-right: 2%;
+}
+
+@media screen and (max-width:1030px){
+    #wakayama-content{
+        font-size: 20px;
+    }
+    
+    .wakayama_map>img{
+        height:350px;
+    }
+    
+    .contentsWakayama1 > img{
+        height:350px;
+    }
+    
+    .contentsWakayama2 > img{
+        height:300px;
+    }
+    
+    .contentsWakayama3 > img{
+        height:350px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .favorite5>h1{
+        font-size: 20px;
+        display: block flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .wakayama_map {
+        flex-direction: column;
+        width:100vw;
+        margin-top:-75px;
+    }
+    
+    .wakayama_map>img{
+        height:200px;
+    }
+    
+    .descriptionWakayama0{
+        font-size:12px;
+        margin:0 auto;
+        width:90%;
+    }
+
+    .contentsWakayama1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .contentsWakayama1>img{
+        height:250px;
+        order:1;
+    }
+
+    .contentsWakayama1>p{
+        order:2;
+    }
+    
+    .descriptionWakayama1{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsWakayama2 > img{
+        height:200px;
+        margin-top: 20px;
+    }
+    
+    .contentsWakayama2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionWakayama2{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+    }
+    
+    .contentsWakayama3 > img{
+        height:250px;
+        margin-top: 20px;
+        order:1;
+    }
+    
+    .contentsWakayama3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    .descriptionWakayama3{
+        font-size: 12px;
+        width: 90%;
+        margin:25px auto 0px auto;
+        order:2;
+    }
+}
+/*和歌山内容ここまで*/
+
+.line2{
+    background-image: url(../img/linesImg/b_simple_114_1L.jpg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    min-height: 10px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.abcde {
+    width: 590px;
+    height: 500px;
+  }
+
+  li{
+    list-style: none;
+}
+  .slide:nth-child(1) {
+    background-color: tomato;
+  }
+  .slide:nth-child(2) {
+    background-color: orange;
+  }
+  .slide:nth-child(3) {
+    background-color: blue;
+  }
+  .slide:nth-child(4) {
+    background-color: green;
+  }
+  .slide:nth-child(5) {
+    background-color: purple;
+  }
+
+  .kyotoSlide{
+      height:500px;
+  }
+
+  .naraSlide{
+      height:450px;
+  }
+
+  .kanazawaSlide{
+    height:450px;
+}
+
+ .hiroshimaSlide{
+    height:500px;
+}
+
+.wakayamaSlide{
+    height:500px;
+}
+
+  .show {
+    display: flex;
+    animation: loop-slide 50s infinite linear 1s both;
+  }
+
+  @keyframes loop-slide {
+      from {
+          transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+  }
+
+  .wrap{
+      display: flex;
+      align-items: center;
+      height:340px;
+      overflow:hidden;
+  }
+
+@media screen and (max-width:1030px){
+.line2{
+    background-repeat: repeat-x;
+    background-position: top center;
+    min-height: 10px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.abcde {
+    width: 480px;
+    height: 390px;
+  }
+
+li{
+    list-style: none;
+}
+  .slide:nth-child(1) {
+    background-color: tomato;
+    background-size:contain;
+  }
+  .slide:nth-child(2) {
+    background-color: orange;
+  }
+  .slide:nth-child(3) {
+    background-color: blue;
+  }
+  .slide:nth-child(4) {
+    background-color: green;
+  }
+  .slide:nth-child(5) {
+    background-color: purple;
+  }
+
+  .kyotoSlide{
+      height:485px;
+  }
+
+  .naraSlide{
+      height:390px;
+  }
+
+  .kanazawaSlide{
+    height:390px;
+}
+
+ .hiroshimaSlide{
+    height:430px;
+}
+
+.wakayamaSlide{
+    height:430px;
+}
+
+  .show {
+    display: flex;
+    animation: loop-slide 50s infinite linear 1s both;
+  }
+
+  @keyframes loop-slide {
+      from {
+          transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+  }
+
+  .wrap{
+      display: flex;
+      align-items: center;
+      height:340px;
+      overflow:hidden;
+  }
+
+}
+
+@media screen and (max-width:500px){
+    .line2{
+        min-height: 10px;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: -20px;
+    }
+
+    .abcde {
+        width: 270px;
+        height: 200px;
+      }
+      .abcde:nth-child(1) {
+        background-color: tomato;
+      }
+      .abcde:nth-child(2) {
+        background-color: orange;
+      }
+      .abcde:nth-child(3) {
+        background-color: blue;
+      }
+      .abcde:nth-child(4) {
+        background-color: green;
+      }
+      .abcde:nth-child(5) {
+        background-color: purple;
+      }
+    
+      .kyotoSlide{
+          height:205px;
+      }
+    
+      .naraSlide{
+          height:205px;
+      }
+    
+      .kanazawaSlide{
+        height:205px;
+    }
+    
+     .hiroshimaSlide{
+        height:205px;
+    }
+    
+    .wakayamaSlide{
+        height:205px;
+    }
+    
+      .show {
+        display: flex;
+        animation: loop-slide 50s infinite linear 1s both;
+      }
+    
+      @keyframes loop-slide {
+          from {
+              transform: translateX(0);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+      }
+    
+      .wrap{
+          display: flex;
+          align-items: center;
+          height:340px;
+          overflow:hidden;
+      }
+    
+}  
+  /*スライドここまで*/
+
+.line3{
+    background-image: url(../img/linesImg/b_simple_114_1L.jpg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    min-height: 10px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom:-90px;
+    z-index:0;
+}
+
+@media screen and (max-width:1030px) {
+    .line3{
+        margin-bottom:-80px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .line3{
+        margin-top: -20px;
+        margin-bottom:-45px;
+    }
+}
+
+.button0{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom:-67px;
+    z-index:1;
+}
+
+@media screen and (max-width:1030px){
+    .button0{
+        bottom:-57px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .button0{
+        bottom:-22px;
+    }
+}
+
+.button>img{
+    height:30px;
+}
+
+/*ボタン作成用*/
+/* .profile.hyoji{
+    position: relative;
+    top:20px;
+    display: block;
+} */
+
+.profile{
+    position: relative;
+    top:20px;
+    display: none;
+    /* background-color: blue; */
+}
+
+.profile.active{
+    display: block;
+}
+
+/* @media screen and(max-width:500px){
+    .profile{
+        background-color: blue;
+    };
+} */
+/*ボタン作成用ここまで*/
+
+.profile0{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width:90vw;
+    margin: 0 auto;
+}
+
+.profile1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:33%;
+}
+
+.profile1>h2{
+    display:flex;
+    justify-content: center;
+}
+
+.profilePicture>img{
+    height:170px;
+    border-radius: 50%;
+}
+
+.profile1>.name{
+    display:flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile1>.furigana{
+    display:flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile2{
+    width:33%;
+    position: relative;
+    bottom:10px;
+}
+
+.profile2>h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.shoukaibun>.shoukai1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shoukaibun>.shoukai2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shoukaibun>.shoukai3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shoukaibun>.shoukai4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shoukaibun>.shoukai5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile3{
+    width:33%;
+    position: relative;
+    bottom: 10px;
+}
+
+.profile3>h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.learn1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.learn2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.learn3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.learn4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.learn5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width:1030px){
+    .profile1{
+        width:30%;
+    }
+    
+    .profilePicture>img{
+        height:150px;
+    }
+    
+    .profile2{
+        width:40%;
+    }
+    
+    .profile2>h2{
+        margin-bottom: 10px;
+    }
+    
+    .shoukaibun>.shoukai1{
+        margin-top:-5px;
+    }
+    
+    .shoukaibun>.shoukai2{
+       margin-top:5px;
+    }
+    
+    .shoukaibun>.shoukai3{
+        margin-top:5px;
+    }
+    
+    .shoukaibun>.shoukai4{
+        margin-top:5px;
+    }
+    
+    .shoukaibun>.shoukai5{
+        margin-top:5px;
+    }
+    
+    .profile3{
+        width:30%;
+        bottom: 12px;
+    }
+    
+    .profile3>h2{
+        margin-bottom: 5px;
+    }
+    
+    .learn1{
+        margin-top:5px;
+    }
+    
+    .learn2{
+        margin-top:5px;
+    }
+    
+    .learn3{
+        margin-top:5px;
+    }
+    
+    .learn4{
+        margin-top:5px;
+    }
+    
+    .learn5{
+        margin-top:5px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .profile0{
+        flex-direction:column;
+    }
+    
+    .profile1{
+        width:90%;
+    }
+    
+    .profile1>h2{
+        display:flex;
+        justify-content: center;
+    }
+    
+    .profilePicture>img{
+        height:150px;
+        border-radius: 50%;
+        margin-top:-20px;
+    }
+    
+    .profile1>.name{
+        margin-top:10px;
+    }
+    
+    .profile2{
+        width:90%;
+        position: relative;
+    }
+    
+    .profile2>h2{
+        display: flex;
+        justify-content: center;
+        margin-top:30px;
+        }
+    
+    .shoukaibun>.shoukai1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top:-18px;
+    }
+    
+    .shoukaibun>.shoukai2{
+        margin-top:5px;
+    }
+    
+    .shoukaibun>.shoukai3{
+        margin-top:5px;
+    }
+    
+    .shoukaibun>.shoukai4{
+        margin-top:5px;
+    }
+    
+    .shoukaibun>.shoukai5{
+        margin-top:5px;
+    }
+    
+    .profile3{
+        width:90%;
+        position: relative;
+        margin-top:30px;
+    }
+    
+    .profile3>h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .learn1{
+        margin-top:-15px;
+    }
+    
+    .learn2{
+        margin-top:5px;
+    }
+    
+    .learn3{
+        margin-top:5px;
+    }
+    
+    .learn4{
+        margin-top:5px;
+    }
+    
+    .learn5{
+        margin-top:5px;
+    }
+       
+}
+/*Profileここまで*/
+
+.line4{
+    background-image: url(../img/linesImg/b_simple_114_1L.jpg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    min-height: 10px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#logoStamp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#logoStamp>img {
+    height:200px;
+}
+
+@media screen and (max-width:1030px){
+    #logoStamp>img{
+        height:180px;
+    }
+}
+
+@media screen and (max-width:500px){
+    #logoStamp>img {
+        height:130px;
+    }
+}
+
+/*ロゴスタンプここまで*/
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+.pagetop a {
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+	filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.pagetop a:hover {
+    display: block;
+    background-color: #b2d1fb;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding:5px 10px;
+	filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+small{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color:yellow;
+}
