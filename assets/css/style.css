@@ -151,7 +151,7 @@ body{
 }
 /*エリア紹介ここまで*/
 
-#kyoto-content{
+.content{
     font-size: 25px;
 }
 
@@ -167,14 +167,12 @@ body{
     height:400px;
 }
 
-.place-info>h1{
+.place-title{
     margin-bottom: 20px;
 }
 
-.place-photo>img{
-    height:500px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+.place-map>p {
+    margin-left:5%;
 }
 
 .place-photo{
@@ -186,26 +184,19 @@ body{
     margin:0 auto;
 }
 
+.place-photo>img{
+    height:500px;
+    border-radius: 5%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+}
+
 .place-description{
     width: 50%;
-    margin-right: 2%;
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-
-.place-photo>img{
-    height:300px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
+    margin-right: 5%;
 }
 
 @media screen and (max-width:1030px){
-    #kyoto-content{
+    .content{
         font-size: 20px;
     }
     
@@ -213,32 +204,25 @@ body{
         height:350px;
     }
     
-    .place-info>h1{
+    .place-title{
         margin-bottom: 20px;
         font-size:32px;
+    }
+
+    .place-description{
+        width: 50%;
+        margin-right: 2%;
+        
     }
     
     .place-photo>img{
         height:400px;
-    }
-    
-    .place-photo>img{
-        height:350px;
-    }
-    
-    .place-photo>img{
-        height:250px;
+        border-radius: 5%;
+        box-shadow: 4px 4px 4px rgba(0,0,0,.7);
     }
 }
 
 @media screen and (max-width:500px){
-    .place-info>h1{
-        font-size: 20px;
-        display: block flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    
     .place-map {
         flex-direction: column;
         width:100vw;
@@ -247,6 +231,13 @@ body{
     
     .place-map>img{
         height:200px;
+    }
+
+    .place-title{
+        font-size: 20px;
+        display: block flex;
+        justify-content: center;
+        margin-top: 10px;
     }
     
     .place-description{
@@ -261,301 +252,16 @@ body{
         align-items: center;   
     }
 
-    .place-photo>img{
-        height:200px;
-        margin-top: 20px;
-        order:1;
-    }
-
-    .kyotoImg1>p{
+     .place-photo>p{
         order:2;
     }
-    
-    .place-description{
-        font-size: 12px;
-        width: 90%;
-        margin:25px auto 0px auto;
-    }
-    
-    .place-photo>img{
-        height:200px;
-    }
-    
-    .place-photo>img{
-        height:160px;
-        order:1;
-    }
-}
-/*京都内容ここまで*/
-
-#nara-content{
-    font-size: 25px;
-}
-
-.place-map>p {
-    margin-left:5%;
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-@media screen and (max-width:1030px){
-    #nara-content{
-        font-size: 22px;
-    }
-    
-    .place-photo>img{
-        height:300px;
-    }
-    
-    .place-description{
-        width: 50%;
-        margin-right: 2%;
-        
-    }
-    
-    .place-photo>img{
-        height:400px;
-        border-radius: 5%;
-        box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-    }
-    
-    .place-photo>img{
-        height:300px;
-        border-radius: 5%;
-        box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-    }
-}
-
-@media screen and (max-width:500px){
 
     .place-photo>img{
-        height:200px;
-        margin-top: 20px;
-        order:1;
-    }
-
-    .place-photo>p{
-        order:2;
-    }
-    
-    .place-photo>img{
-        height:200px;
-    }
-    
-    .place-photo>img{
-        height:160px;
-        order:1;
-    }
-}
-
-/*奈良内容ここまで*/
-
-#kanazawa-content{
-    font-size: 25px;
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:300px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:300px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-@media screen and (max-width:1030px)  {
-    #kanazawa-content{
-        font-size: 20px;
-    }
-    
-    .place-photo>img{
-        height:300px;
-    }
-    
-    .place-photo>img{
-        height:240px;
-    }
-    
-    .place-photo>img{
-        height:230px;
-    }
-}
-
-@media screen and (max-width:500px){
-
-    .place-photo>img{
-        height:200px;
-        order:1;
-    }
-
-    .place-photo>p{
-        order:2;
-    }
-    
-    .place-photo>img{
-        height:180px;
-        margin-top: 20px;
-    }
-    
-    .place-photo>img{
-        height:180px;
+        height:280px;
         margin-top: 20px;
         order:1;
     }
 }
-/*金沢内容ここまで*/
-
-#hiroshima-content{
-    font-size: 25px;
-}
-
-.place-photo>img{
-    height:300px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:450px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-@media screen and (max-width:1030px){
-    #hiroshima-content{
-        font-size: 20px;
-    }
-    
-    .place-photo>img{
-        height:240px;
-    }
-    
-    .place-photo>img{
-        height:350px;
-    }
-    
-    .place-photo>img{
-        height:300px;
-    }
-}
-
-@media screen and (max-width:500px){
-    .place-photo>img{
-        height:150px;
-        order:1;
-    }
-
-    .place-photo>p{
-        order:2;
-    }
-    
-    .place-photo>img{
-        height:180px;
-        margin-top: 20px;
-    }
-    
-    .place-photo>img{
-        height:180px;
-        margin-top: 20px;
-        order:1;
-    }
-}
-/*広島内容ここまで*/
-
-#wakayama-content{
-    font-size: 25px;
-}
-
-.place-photo>img{
-    height:500px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:400px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-.place-photo>img{
-    height:500px;
-    border-radius: 5%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.7);
-}
-
-@media screen and (max-width:1030px){
-    #wakayama-content{
-        font-size: 20px;
-    }
-    
-    .place-photo>img{
-        height:350px;
-    }
-    
-    .place-photo>img{
-        height:300px;
-    }
-    
-    .place-photo>img{
-        height:350px;
-    }
-}
-
-@media screen and (max-width:500px){
-
-    .place-photo>img{
-        height:250px;
-        order:1;
-    }
-
-    .place-photo>p{
-        order:2;
-    }
-    
-    .place-photo>img{
-        height:200px;
-        margin-top: 20px;
-    }
-    
-    .place-photo>img{
-        height:250px;
-        margin-top: 20px;
-        order:1;
-    }
-}
-/*和歌山内容ここまで*/
 
 .line2{
     background-image: url(../img/linesImg/b_simple_114_1L.jpg);
