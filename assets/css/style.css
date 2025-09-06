@@ -16,11 +16,28 @@ body{
     display: flex; 
     justify-content: center;
     align-items: center;
-
     animation: image_anime 45s ease 9s infinite; 
-    /* ①animation-name, ②animation-duration, ③animation-timing-function, ④animation-delay, ⑤animation-iteration-count  */
-    /* アニメーションを設定*/
     animation-fill-mode:  none;
+}
+
+.top__logo img{
+    height:200px;
+    bottom: 200px;
+    border-radius: 50%;
+    position: relative;
+}
+
+@media screen and (max-width:1030px){
+    .top__logo img{
+        height:180px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .top__logo img{
+        height:120px;
+    }
+
 }
 
 @keyframes image_anime {
@@ -38,32 +55,6 @@ body{
     }
 }
 
-.top>img{
-    height:200px;
-    position: relative;
-    bottom: 200px;
-    border-radius: 50%;
-}
-
-@media screen and (max-width:1030px){
-    .top{
-        background-size:100vw 100vh;
-    }
-    .top>img{
-        height:180px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .top{
-    background-size:100vw 100vh;
-}   
-    .top>img{
-        height:120px;
-    }
-
-}
-
 /*ここまでトップ画像*/
 
 .area{
@@ -73,7 +64,7 @@ body{
     font-weight: bold;
 }
 
-.area_title{
+.area__title{
     margin-top:20px;
 }
 
