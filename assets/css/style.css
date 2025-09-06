@@ -16,11 +16,28 @@ body{
     display: flex; 
     justify-content: center;
     align-items: center;
-
     animation: image_anime 45s ease 9s infinite; 
-    /* ①animation-name, ②animation-duration, ③animation-timing-function, ④animation-delay, ⑤animation-iteration-count  */
-    /* アニメーションを設定*/
     animation-fill-mode:  none;
+}
+
+.top__logo img{
+    height:200px;
+    bottom: 200px;
+    border-radius: 50%;
+    position: relative;
+}
+
+@media screen and (max-width:1030px){
+    .top__logo img{
+        height:180px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .top__logo img{
+        height:120px;
+    }
+
 }
 
 @keyframes image_anime {
@@ -38,32 +55,6 @@ body{
     }
 }
 
-.top>img{
-    height:200px;
-    position: relative;
-    bottom: 200px;
-    border-radius: 50%;
-}
-
-@media screen and (max-width:1030px){
-    .top{
-        background-size:100vw 100vh;
-    }
-    .top>img{
-        height:180px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .top{
-    background-size:100vw 100vh;
-}   
-    .top>img{
-        height:120px;
-    }
-
-}
-
 /*ここまでトップ画像*/
 
 .area{
@@ -73,11 +64,11 @@ body{
     font-weight: bold;
 }
 
-.areaIntroduction{
+.area__title{
     margin-top:20px;
 }
 
-.line1{
+.area__divider{
     background-image: url(../img/linesImg/b_simple_114_1L.jpg);
     background-repeat: repeat-x;
     background-position: top center;
@@ -95,120 +86,48 @@ body{
     display: block;
 }
 
-.bokashi.choice {
+.circle-buttons__image.circle-buttons__image--active {
     filter: opacity(0.4);
 }
 
-.bokashi {
+.circle-buttons__image {
     position:relative;
 }
 
-.bokashi:hover{
+.circle-buttons__image:hover{
     top:-7px;
     box-shadow: 5px 5px 5px rgba(0,0,0,.7);
     transition:0.3s;
 }
 /*差し替え用ここまで*/
-#circle8{
-    width:70%;
-    margin:0 auto;
-}
-
-#circleAll8{
+.circle-buttons{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    margin-top: 40px;
+    margin: 40px auto 0;
+    width:70%;
 }
 
-#circleKyoto2>button>img{
+.circle-buttons__image{
     height: 120px;
     border-radius: 50%;
 }
 
-#circleKyoto2>p{
-    font-size: 22px;
-}
-
-#circleNara2>button>img{
-    height: 120px;
-    border-radius: 50%;
-}
-
-#circleNara2>p{
-    font-size: 22px;
-}
-
-#circleKanazawa2>button>img{
-    height: 120px;
-    border-radius: 50%;
-}
-
-#circleKanazawa2>p{
-    font-size: 22px;
-}
-
-#circleHiroshima2>button>img{
-    height: 120px;
-    border-radius: 50%;
-}
-
-#circleHiroshima2>p{
-    font-size: 22px;
-}
-
-#circleWakayama2>button>img{
-    height: 120px;
-    border-radius: 50%;
-}
-
-#circleWakayama2>p{
+.circle-buttons__label{
     font-size: 22px;
 }
 
 @media screen and (max-width:1030px){
-    #circle8{
+    .circle-buttons{
         width:80%;
     }
     
-    #circleKyoto2>button>img{
+    .circle-buttons__image{
         height: 110px;
     }
     
-    #circleKyoto2>p{
-        font-size: 20;
-    }
-    
-    #circleNara2>button>img{
-        height: 110px;
-    }
-    
-    #circleNara2>p{
-        font-size: 20px;
-    }
-    
-    #circleKanazawa2>button>img{
-        height: 110px;
-    }
-    
-    #circleKanazawa2>p{
-        font-size: 20px;
-    }
-    
-    #circleHiroshima2>button>img{
-        height: 110px;
-    }
-    
-    #circleHiroshima2>p{
-        font-size: 20px;
-    }
-    
-    #circleWakayama2>button>img{
-        height: 110px;
-    }
-    
-    #circleWakayama2>p{
+    .circle-buttons__label{
         font-size: 20px;
     }
 }
@@ -218,47 +137,15 @@ body{
         font-size: 25px;
     }
 
-    #circle8{
+    .circle-buttons{
         width:90%;
     }
     
-    #circleKyoto2>button>img{
+    .circle-buttons__image{
         height: 60px;
     }
     
-    #circleKyoto2>p{
-        font-size: 13px;
-    }
-    
-    #circleNara2>button>img{
-        height: 60px;
-    }
-    
-    #circleNara2>p{
-        font-size: 13px;
-    }
-    
-    #circleKanazawa2>button>img{
-        height: 60px;
-    }
-    
-    #circleKanazawa2>p{
-        font-size: 13px;
-    }
-    
-    #circleHiroshima2>button>img{
-        height: 60px;
-    }
-    
-    #circleHiroshima2>p{
-        font-size: 13px;
-    }
-    
-    #circleWakayama2>button>img{
-        height: 60px;
-    }
-    
-    #circleWakayama2>p{
+    .circle-buttons__label{
         font-size: 13px;
     }
 }

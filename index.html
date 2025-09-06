@@ -1,367 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta img= ".assets/img/hiroshima/マツダスタジアム2.jpg" >
-    <title>おすすめ観光スポット | いいとこ発見！</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-     <!-- metaタグ -->
-     <!-- その記事で扱うキーワード　5個ぐらい -->
-     <meta name = "keywords" content = "観光, 街, 金沢, 温泉, 景色">
-     <!-- その記事の内容を120字程度で表す概要文 -->
-     <meta name = "description" content = "「京都」「奈良」「金沢」「広島」「和歌山」観光におすすめの街や穴場のスポットを知りたい場合は、いいとこ発見へ！　マイナーな絶景スポットからメジャーな観光スポットまで知ることができます。">
+<html lang="ja">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>おすすめ観光スポット | いいとこ発見！</title>
+
+  <!-- SEO用 -->
+  <meta name="description" content="「京都」「奈良」「金沢」「広島」「和歌山」観光におすすめの街や穴場のスポットを知りたい場合は、いいとこ発見へ！ マイナーな絶景スポットからメジャーな観光スポットまで知ることができます。">
+  <meta name = "keywords" content = "観光, 街, 金沢, 温泉, 景色">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="おすすめ観光スポット | いいとこ発見！">
+  <meta property="og:description" content="「京都」「奈良」「金沢」「広島」「和歌山」観光におすすめの街や穴場のスポットを知ることができます。">
+  <meta property="og:image" content= "https://shutaprogrammer.github.io/WebSite/assets/img/hiroshima/マツダスタジアム2.jpg" >
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <main>
-        <section class = "top">
-            <img src="./assets/img/stamps/いいとこ発見_bigger.png" alt="">
-        </section>
-      <section class = "area">
-        <p class="areaIntroduction">エリア紹介</p>
-        <div id="circle8">
-        <div id="circleAll8">
-            <div id="circleKyoto2" class="imageButton"> 
-              <button onclick="showContent('kyoto-content')">
-                <img src="./assets/img/kyoto/Circle.嵐山元禄山町.jpg" class="bokashi choice" id="kyoto-contentBokashi" alt="">
-            </button>
-            <p>京都</p>
-            </div>
-          <div id="circleNara2" class="imageButton">
-            <button onclick="showContent('nara-content')">
-              <img src="./assets/img/nara/Circle.唐招提寺.jpg" class="bokashi" id="nara-contentBokashi" alt="">
-            </button>
-            <p>奈良</p>
-          </div>
-          <div id="circleKanazawa2" class="imageButton">
-            <button onclick="showContent('kanazawa-content')">
-              <img src="./assets/img/kanazawa/Circle.兼六園4.jpg" class="bokashi" id="kanazawa-contentBokashi" alt="">
-            </button>
-            <p>金沢</p>
-          </div>
-          <div id="circleHiroshima2" class="imageButton">
-            <button onclick="showContent('hiroshima-content')">
-              <img src="./assets/img/hiroshima/Circle.matsudaStadium2.jpg" class="bokashi" id="hiroshima-contentBokashi" alt="">
-            </button>
-            <p>広島</p>
-          </div>
-          <div id="circleWakayama2" class="imageButton">
-            <button onclick="showContent('wakayama-content')">
-              <img src="./assets/img/wakayama/Circle.熊野本宮大社2.jpg" class="bokashi" id="wakayama-contentBokashi" alt="">
-            </button>
-            <p>和歌山</p>
-          </div>
+  <main>
+    <section class="top">
+      <h1 class="top__logo">
+        <img src="./assets/img/stamps/いいとこ発見_bigger.png" 
+              alt="いいとこ発見">
+      </h1>
+    </section>
+    <section class="area">
+      <p class="area__title">エリア紹介</p>
+      <div class="circle-buttons">
+        <div class="circle-buttons__item" data-target="kyoto" onclick="showContent('kyoto-content')"> 
+          <button class="circle-buttons__button">
+            <img src="./assets/img/kyoto/Circle.嵐山元禄山町.jpg" 
+                  class="circle-buttons__image circle-buttons__image--active" 
+                  id="kyoto-contentBokashi" 
+                  alt="京都">
+          </button>
+          <p class="circle-buttons__label">京都</p>
         </div>
-        </div>
-        <div class="line1"></div>
-      </section>
 
-    <div id="kyoto-content" class="content active">
-      <section class = "kyoto_map">
-        <img src="./assets/img/maps/kyotoStampPicture.png" alt="">
-        <div class="favorite1">
-          <h1>好きな街　其ノ壱</h1>
-          <p class="descriptionKyoto0">
-              いにしえの都「京都」は、金閣寺や清水寺、二条城、龍安寺と枚挙にいとまがないほど見どころ満載です。歴史的建造物を見ることはもちろん、春夏秋冬、さまざまな趣ある景色を見たり、旬の食材を使ったグルメを楽しむこととができます。
-              大阪勤務時代、京阪電車・阪急電車に揺られ幾度も訪れた思い出の街です。
-              </p>
+        <div class="circle-buttons__item" data-target="nara" onclick="showContent('nara-content')">
+          <button class="circle-buttons__button">
+            <img src="./assets/img/nara/Circle.唐招提寺.jpg" 
+                  class="circle-buttons__image" 
+                  id="nara-contentBokashi" 
+                  alt="奈良">
+          </button>
+          <p class="circle-buttons__label">奈良</p>
         </div>
-      </section>
-      <section class = "kyotoImg1">
-         <p class="descriptionKyoto1">
-            京都市郊外も素敵な場所がたくさんあります。宇治や嵐山といった場所では自然と融合した素晴らしい景色、生き物たちを見ることができます。
-            また、京都市中心部は他の街とは違う雰囲気が漂います。祇園や先斗町、四条河原町といった繁華街では日本料理や京料理を提供する飲食店が多く、季節の食材を使った料理に舌鼓を打ちます。
-         </p>
-         <img src="./assets/img/kyoto/嵐山.jpg" alt="">
-      </section>
-      <section class = "kyoto_img2">
-        <div class="contentsKyoto2">
-          <img src="./assets/img/kyoto/修学院離宮.jpg" alt="">
-          <p class="descriptionKyoto2">
-              宮内庁が管理している修学院離宮や京都御所、桂離宮は知る人ぞ知るスポットです。
-              紅葉の季節に訪れると非常に美しく、庭師によって手入れされた庭園は別格の美しさを誇ります。京都御所はかつての天皇の住まいで、王政復古の大号令といった歴史的転換点を迎えた場所になります。
-          </p>
-        </div>
-      </section>
-      <section class = "kyoto_img3">
-        <div class="contentsKyoto3">
-          <p class="descriptionKyoto3">
-              夏の嵐山の風物詩といえば、なんといっても鵜飼でしょう。伝統的な漁法を屋形船に乗りながら見学することができます。
-              竹林の小径を歩くと木漏れ日が心地よく、トロッコの駅まで行ったり、源氏物語の作中で登場する野宮神社を訪れたりすることも可能です。
-              また、嵐山には温泉があり、まったりと過ごせば至福のひと時を味わえます。
-              
-          </p>
-          <img src="./assets/img/kyoto/鵜飼3.jpg" alt="">
-        </div>
-      </section>
-      <section class = "kyoto_access"></section>
-    </div>
 
-    <div id="nara-content" class="content">
-      <section class = "nara_map">
-        <img src="./assets/img/maps/naraStampPicture.png" alt="">
-        <div class="favorite2">
-          <h1>好きな街　其ノ弐</h1>
-          <p class="descriptionNara0">かつて都として栄えた奈良には歴史的建造物が多く残ります。神社・仏閣に留まらず、歴史のある建物が非常に多く存在します。また、大阪難波駅から奈良市の中心部である近鉄奈良駅まで電車１本で40分弱とアクセスが良く、大阪に住んでいた際何度も訪れました。奈良は疲れた心身を癒してくれる優しい街です。</p>
+        <div class="circle-buttons__item" data-target="kanazawa" onclick="showContent('kanazawa-content')">
+          <button class="circle-buttons__button">
+            <img src="./assets/img/kanazawa/Circle.兼六園4.jpg" 
+                  class="circle-buttons__image" 
+                  id="kanazawa-contentBokashi" 
+                  alt="金沢">
+          </button>
+          <p class="circle-buttons__label">金沢</p>
         </div>
-      </section>
-      <section class = "nara_img1">
-        <div class="contentsNara1">
-          <p class="descriptionNara1">
-            奈良公園には原生林を住処とする鹿が多く生息します。鹿せんべいを片手に公園を歩けば鹿と触れ合うこともでき、心を落ち着かせるのにぴったりな場所です。たまに横断歩道を横切る鹿を待つドライバーを見るとほっこりします。そして原生林の中には春日大社があり、身の引き締まる思いで祈願するのもまた良しです。
-          </p>
-          <img src="./assets/img/nara/奈良公園.jpg" alt="">
-        </div>
-      </section>
-      <section class = "nara_img2">
-        <div class="contentsNara2">
-          <img src="./assets/img/nara/東大寺2.jpg" alt="">
-          <p class="descriptionNara2">
-            奈良といえばやはり東大寺の大仏が真っ先に思い浮かぶかと思います。聖武天皇の命により、当時の最新技術を駆使してつくられました。高さ約18mの大仏を目の前にするとその大きさに圧倒されます。また、南大門には勇ましい金剛力士像が配置されており、こちらも見逃すことができません。
-          </p>
-        </div>
-      </section>
-      <section class = "nara_img3">
-        <div class="contentsNara3">
-          <p class="descriptionNara3">
-            今から約1300年前、平城京の外都として整備されたのが「ならまち」です。奈良市中心部に位置し、歴史的な街並みを有しています。昔から続く酒蔵やこんぺいとう屋などがあり、伝統を感じつつ楽しむことができます。近くには元興寺や興福寺といった世界遺産に登録されている寺があります。
-          </p>
-          <img src="./assets/img/nara/ならまち.jpg" alt="">
-          </div>
-      </section>
-      <section class = "nara_access"></section>
-    </div>
 
-    <div id="kanazawa-content" class="content">
-      <section class = "kanazawa_map">
-        <img src="./assets/img/maps/ishikawaStampPicture.png" alt="">
-        <div class=favorite3>
-          <h1>好きな街　其ノ参</h1>
-          <p class = "descriptionKanazawa0">前田家のお膝元、城下町「金沢」は昔ながらの街並みを残す風情ある街です。
-              ひがし茶屋街では、着物をレンタルして、伝統的な街並みをバックに撮影することが出来ます。また、デザイン性に富んだ加賀の九谷焼を購入することもでき、食卓にぴったりの焼き物を探すこともできます。
-              </p>
+        <div class="circle-buttons__item" data-target="hiroshima" onclick="showContent('hiroshima-content')">
+          <button class="circle-buttons__button">
+            <img src="./assets/img/hiroshima/Circle.matsudaStadium2.jpg" 
+                  class="circle-buttons__image" 
+                  id="hiroshima-contentBokashi" 
+                  alt="広島">
+          </button>
+          <p class="circle-buttons__label">広島</p>
         </div>
-      </section>
-      <section class = "kanazawa_img1">
-        <div class="contentsKanazawa1">
-          <p class="descriptionKanazawa1">
-              飲んだ後の締めには何と言っても金沢おでん。金沢の寒い冬で頂く金沢おでんは至高の一品です。
-              近江市場を歩けば、石川で採れた新鮮な魚介をいただくことが出来ます。日本海側で獲れるノドグロを炙りだけでなく、なんと生で頂くことが出来ます。また、旬には茶ぶりのナマコだけでなく、磯の香りを楽しめる生のナマコや能登で採れた鳥貝を頂くこともできるかもしれません。              
-          </p>
-          <img src="./assets/img/kanazawa/金沢おでん.jpg" alt="">
-        </div>
-      </section>
-      <section class = "kanazawa_img2">
-        <div class="contentsKanazawa2">
-          <img src="./assets/img/kanazawa/兼六園3.jpg" alt="">
-          <p class="descriptionKanazawa2">
-            日本三名園の一つとされる兼六園は、加賀の藩主たちが長い年月をかけて作り上げてきた庭園です。どの季節に訪れても非常に美しい庭園ですが、冬に訪れると北陸の冬の風物詩である雪吊りを見ることが出来ます。庭園内の雪釣りを施された唐崎松はとても素晴らしい姿です。また、一年を通して様々な草花や野鳥を見ることができるのも兼六園の魅力です。
-          </p>
-        </div>
-      </section>
-      <section class = "kanazawa_img3">
-        <div class="contentsKanazawa3">
-          <p class="descriptionKanazawa3">
-              加賀藩を治めた前田家を象徴する金沢城のある金沢城公園は、桜シーズンに訪れるのがおすすめです。ソメイヨシノをはじめとした桜が多くあり、花見を存分に楽しむことが出来ます。周辺のカフェでゆったりと過ごすのもおすすめです。また、金沢城公園から香林坊や片町といった繁華街が近く、そこでは金沢のグルメを堪能することもできます。
-          </p>
-          <img src="./assets/img/kanazawa/金沢城＿桜.jpg" alt="">
-        </div>
-      </section>
-      <section class = "kanazawa_access"></section>
-    </div>
 
-    <div id="hiroshima-content" class="content">
-      <section class = "hiroshima_map">
-        <img src="./assets/img/maps/hiroshimaStampPicture.png" alt="">
-        <div class="favorite4">
-          <h1>好きな街　其ノ肆</h1>
-          <p class="descriptionHiroshima0">地元広島は思い出の詰まった街です。宮島や原爆ドームといった世界遺産だけでなく、あまり知られていないだけで魅力的な場所もたくさんあります。悲惨な歴史があり世界平和を象徴する街として世界に知られていますが、自然豊かな街でもあります。愛媛へと通じるしまなみ海道や呉の島々をつなぐとびしま海道など絶景スポットが数多くあります。</p>
-        </div>
-        </section>
-      <section class = "hiroshima_img1">
-        <div class="contentsHiroshima1">
-          <p class="descriptionHiroshima1">
-            広島といえばやはり、「広島東洋カープ」の本拠地マツダスタジアムでビール片手に野球観戦が最高です。新幹線の通っている広島駅から歩いて10分程度と、全国一と言っていいほど好立地なスタジアムです。
-            また、プロサッカーチームの「サンフレッチェ広島」は2024年にサッカー専用のスタジアム「エディオンピースウィング広島」を本拠地としており、サッカーも盛んで熱い街となっています。
-          </p>
-          <img src="./assets/img/hiroshima/マツダスタジアム3.jpg" alt="">
-        </div>
-      </section>
-      <section class = "hiroshima_img2">
-        <div class="contentsHiroshima2">
-          <img src="./assets/img/hiroshima/宮島花火.jpg" alt="">
-            <p class="descriptionHiroshima2">
-              日本三景の一つとして知られる宮島は、厳島神社の鳥居をシンボルとして絶景を見せてくます。そしてアナゴ飯やもみじ饅頭をはじめ、美味しいグルメを堪能することができます。
-              また、宮島はしゃもじが有名ですが、日清・日露戦争時に広島の宇品港から兵隊が出征する際、「敵をめしとる」という言葉にかけて無事を祈願していた背景があり、広島がかつて軍都であった歴史を感じさせます。                
-            </p>
-        </div>
-      </section>
-      <section class = "hiroshima_img3">
-        <div class="contentsHiroshima3">
-          <p class="descriptionHiroshima3">
-            大小7つの島をつなぐ「とびしま海道」ではスカイブルーの海を見渡すことができます。晴れた日の「とびしま海道」でのドライブ、サイクリングは最高です。呉市から橋を渡ると愛媛県今治市の島まで渡ることができ、途中の島では、江戸時代から明治時代にかけて北前船が停泊する港街として栄えたエリアがあります。自然と歴史を感じることのできる魅力の詰まった海道です。
-          </p>
-          <img src="./assets/img/hiroshima/御手洗＿神社.jpg" alt="">
-        </div>
-      </section>
-      <section class = "hiroshima_access"></section>
-    </div>
-
-    <div id="wakayama-content" class="content">
-      <section class = "wakayama_map">
-        <img src="./assets/img/maps/wakayamaStampPicture.png" alt="">
-        <div class="favorite5">
-          <h1>好きな街　其ノ伍</h1>
-          <p class="descriptionWakayama0">和歌山には非常に多くの観光スポットがあります。高野山に白浜、熊野三山や串本など景色、温泉、グルメ、歴史と幾多の楽しみ方があります。特に海産物が多く採れ、勝浦で水揚げされた生マグロは絶品です。また、串本町には日本初の民間ロケット発射場があり、ロケット打ち上げの試みが行われています。</p>
-        </div>
-      </section>
-      <section class = "wakayama_img1">
-        <div class="contentsWakayama1">
-          <p class="descriptionWakayama1">
-            和歌山の山奥に車を走らせると温泉郷へ辿り着きます。温泉郷の一つ、湯の峰温泉にはその時々で色が変わる「つぼ湯」があります。温泉に浸かるまで湯がどのような色か分からず、とてもワクワクします。また近くの川湯温泉には仙人風呂があり、川の中に入って温泉に浸かるという貴重な体験ができます。
-          </p>
-          <img src="./assets/img/wakayama/つぼ湯.jpg" alt="">
-        </div>
-      </section>
-      <section class = "wakayama_img2">
-        <div class="contentsWakayama2">
-          <img src="./assets/img/wakayama/白浜＿夕方.jpg" alt="">
-            <p class="descriptionWakayama2">
-              真っ白な砂浜にエメラルドグリーンの海が広がる白浜は関西を代表するビーチです。白浜で眺めるビーチは言葉にし難いほどの美しさです。
-              また温泉地として有名な白浜には、太平洋が間近に迫る崎の湯温泉があります。岩に波が打ち寄せ、波の音を楽しみながらゆっくりと湯に浸かることができます。そして周辺にも歴史を持った多数の温泉が存在します。
-                
-            </p>
-        </div>
-      </section>
-      <section class = "wakayama_img3">
-        <div class="contentsWakayama3">
-          <p class="descriptionWakayama3">
-            熊野本宮大社、熊野速玉大社、熊野那智大社からなる熊野三山には、サッカー日本代表のエンブレムでお馴染みの八咫烏の伝説があります。八咫烏は初代天皇を熊野から奈良の橿原に導いたとされ、勝利を導く守り神として親しまれています。また、熊野那智大社にある那智の滝は日本三名瀑に数えられ、迫力に圧倒されます。
-          </p>
-          <img src="./assets/img/wakayama/那智の滝.jpg" alt="">
-        </div>
-      </section>
-      <section class = "wakayama_access"></section>
-    </div>
-      <div class="line2"></div>
-      <section class = "slideshowAll">
-        <div class="wrap">
-        <ul class="show">
-          <li class="abcde">
-            <img src="./assets/img/kyoto/渡月橋2.jpg" class="kyotoSlide" alt="">
-          </li>
-          <li class="abcde">
-            <img src="./assets/img/nara/平城宮跡.jpg" class="naraSlide" alt="">
-          </li>
-          <li class="abcde">
-            <img src="./assets/img/kanazawa/Square.兼六園4.jpg" class="kanazawaSlide" alt="">
-          </li>
-          <li class="abcde">
-            <img src="./assets/img/hiroshima/蒲刈町.jpg" class="hiroshimaSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/wakayama/橋杭岩.jpg" class="wakayamaSlide" alt="">
-          </li>
-        </ul>
-        <ul class="show">
-          <li class="abcde">
-              <img src="./assets/img/kyoto/渡月橋2.jpg" class="kyotoSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/nara/平城宮跡.jpg" class="naraSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/kanazawa/Square.兼六園4.jpg" class="kanazawaSlide" alt="">
-          </li>
-          <li class="abcde">
-            <img src="./assets/img/hiroshima/蒲刈町.jpg" class="hiroshimaSlide" alt="">
-          </li>
-          <li class="abcde">
-            <img src="./assets/img/wakayama/橋杭岩.jpg" class="wakayamaSlide" alt="">
-          </li>
-        </ul>
-        <ul class="show">
-          <li class="abcde">
-              <img src="./assets/img/kyoto/渡月橋2.jpg" class="kyotoSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/nara/平城宮跡.jpg" class="naraSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/kanazawa/Square.兼六園4.jpg" class="kanazawaSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/hiroshima/蒲刈町.jpg" class="hiroshimaSlide" alt="">
-          </li>
-          <li class="abcde">
-              <img src="./assets/img/wakayama/橋杭岩.jpg" class="wakayamaSlide" alt="">
-          </li>
-        </ul>
-        </div>
-      </section>
-      <div class="shoukaiButton">
-        <div class="line3"></div>
-        <div class="button0">
-          <button class="button"><img class ="buttonImg" src="./assets/img/profile/button2/btn045_10.png" alt=""></button>
+        <div class="circle-buttons__item" data-target="wakayama" onclick="showContent('wakayama-content')">
+          <button class="circle-buttons__button">
+            <img src="./assets/img/wakayama/Circle.熊野本宮大社2.jpg" 
+                  class="circle-buttons__image" 
+                  id="wakayama-contentBokashi" 
+                  alt="和歌山">
+          </button>
+          <p class="circle-buttons__label">和歌山</p>
         </div>
       </div>
-      <section id="introduction" class="profile ">
-        <div class="profile0">
-          <div class="profile1">
-            <div class="profilePicture">
-            <img src="./assets/img/profile/profilePicture_squareBig.jpg" alt="">
-            </div>
-            <div class="name">
-                <p>齊藤 秀太</p>
-              </div>
-              <div class="furigana">
-                <p>（さいとう しゅうた）</p>
-              </div>
+      <div class="area__divider"></div>
+    </section>
+
+  <div id="kyoto-content" class="content active">
+    <section class = "kyoto_map">
+      <img src="./assets/img/maps/kyotoStampPicture.png" alt="">
+      <div class="favorite1">
+        <h1>好きな街　其ノ壱</h1>
+        <p class="descriptionKyoto0">
+            いにしえの都「京都」は、金閣寺や清水寺、二条城、龍安寺と枚挙にいとまがないほど見どころ満載です。歴史的建造物を見ることはもちろん、春夏秋冬、さまざまな趣ある景色を見たり、旬の食材を使ったグルメを楽しむこととができます。
+            大阪勤務時代、京阪電車・阪急電車に揺られ幾度も訪れた思い出の街です。
+            </p>
+      </div>
+    </section>
+    <section class = "kyotoImg1">
+        <p class="descriptionKyoto1">
+          京都市郊外も素敵な場所がたくさんあります。宇治や嵐山といった場所では自然と融合した素晴らしい景色、生き物たちを見ることができます。
+          また、京都市中心部は他の街とは違う雰囲気が漂います。祇園や先斗町、四条河原町といった繁華街では日本料理や京料理を提供する飲食店が多く、季節の食材を使った料理に舌鼓を打ちます。
+        </p>
+        <img src="./assets/img/kyoto/嵐山.jpg" alt="">
+    </section>
+    <section class = "kyoto_img2">
+      <div class="contentsKyoto2">
+        <img src="./assets/img/kyoto/修学院離宮.jpg" alt="">
+        <p class="descriptionKyoto2">
+            宮内庁が管理している修学院離宮や京都御所、桂離宮は知る人ぞ知るスポットです。
+            紅葉の季節に訪れると非常に美しく、庭師によって手入れされた庭園は別格の美しさを誇ります。京都御所はかつての天皇の住まいで、王政復古の大号令といった歴史的転換点を迎えた場所になります。
+        </p>
+      </div>
+    </section>
+    <section class = "kyoto_img3">
+      <div class="contentsKyoto3">
+        <p class="descriptionKyoto3">
+            夏の嵐山の風物詩といえば、なんといっても鵜飼でしょう。伝統的な漁法を屋形船に乗りながら見学することができます。
+            竹林の小径を歩くと木漏れ日が心地よく、トロッコの駅まで行ったり、源氏物語の作中で登場する野宮神社を訪れたりすることも可能です。
+            また、嵐山には温泉があり、まったりと過ごせば至福のひと時を味わえます。
+            
+        </p>
+        <img src="./assets/img/kyoto/鵜飼3.jpg" alt="">
+      </div>
+    </section>
+    <section class = "kyoto_access"></section>
+  </div>
+
+  <div id="nara-content" class="content">
+    <section class = "nara_map">
+      <img src="./assets/img/maps/naraStampPicture.png" alt="">
+      <div class="favorite2">
+        <h1>好きな街　其ノ弐</h1>
+        <p class="descriptionNara0">かつて都として栄えた奈良には歴史的建造物が多く残ります。神社・仏閣に留まらず、歴史のある建物が非常に多く存在します。また、大阪難波駅から奈良市の中心部である近鉄奈良駅まで電車１本で40分弱とアクセスが良く、大阪に住んでいた際何度も訪れました。奈良は疲れた心身を癒してくれる優しい街です。</p>
+      </div>
+    </section>
+    <section class = "nara_img1">
+      <div class="contentsNara1">
+        <p class="descriptionNara1">
+          奈良公園には原生林を住処とする鹿が多く生息します。鹿せんべいを片手に公園を歩けば鹿と触れ合うこともでき、心を落ち着かせるのにぴったりな場所です。たまに横断歩道を横切る鹿を待つドライバーを見るとほっこりします。そして原生林の中には春日大社があり、身の引き締まる思いで祈願するのもまた良しです。
+        </p>
+        <img src="./assets/img/nara/奈良公園.jpg" alt="">
+      </div>
+    </section>
+    <section class = "nara_img2">
+      <div class="contentsNara2">
+        <img src="./assets/img/nara/東大寺2.jpg" alt="">
+        <p class="descriptionNara2">
+          奈良といえばやはり東大寺の大仏が真っ先に思い浮かぶかと思います。聖武天皇の命により、当時の最新技術を駆使してつくられました。高さ約18mの大仏を目の前にするとその大きさに圧倒されます。また、南大門には勇ましい金剛力士像が配置されており、こちらも見逃すことができません。
+        </p>
+      </div>
+    </section>
+    <section class = "nara_img3">
+      <div class="contentsNara3">
+        <p class="descriptionNara3">
+          今から約1300年前、平城京の外都として整備されたのが「ならまち」です。奈良市中心部に位置し、歴史的な街並みを有しています。昔から続く酒蔵やこんぺいとう屋などがあり、伝統を感じつつ楽しむことができます。近くには元興寺や興福寺といった世界遺産に登録されている寺があります。
+        </p>
+        <img src="./assets/img/nara/ならまち.jpg" alt="">
+        </div>
+    </section>
+    <section class = "nara_access"></section>
+  </div>
+
+  <div id="kanazawa-content" class="content">
+    <section class = "kanazawa_map">
+      <img src="./assets/img/maps/ishikawaStampPicture.png" alt="">
+      <div class=favorite3>
+        <h1>好きな街　其ノ参</h1>
+        <p class = "descriptionKanazawa0">前田家のお膝元、城下町「金沢」は昔ながらの街並みを残す風情ある街です。
+            ひがし茶屋街では、着物をレンタルして、伝統的な街並みをバックに撮影することが出来ます。また、デザイン性に富んだ加賀の九谷焼を購入することもでき、食卓にぴったりの焼き物を探すこともできます。
+            </p>
+      </div>
+    </section>
+    <section class = "kanazawa_img1">
+      <div class="contentsKanazawa1">
+        <p class="descriptionKanazawa1">
+            飲んだ後の締めには何と言っても金沢おでん。金沢の寒い冬で頂く金沢おでんは至高の一品です。
+            近江市場を歩けば、石川で採れた新鮮な魚介をいただくことが出来ます。日本海側で獲れるノドグロを炙りだけでなく、なんと生で頂くことが出来ます。また、旬には茶ぶりのナマコだけでなく、磯の香りを楽しめる生のナマコや能登で採れた鳥貝を頂くこともできるかもしれません。              
+        </p>
+        <img src="./assets/img/kanazawa/金沢おでん.jpg" alt="">
+      </div>
+    </section>
+    <section class = "kanazawa_img2">
+      <div class="contentsKanazawa2">
+        <img src="./assets/img/kanazawa/兼六園3.jpg" alt="">
+        <p class="descriptionKanazawa2">
+          日本三名園の一つとされる兼六園は、加賀の藩主たちが長い年月をかけて作り上げてきた庭園です。どの季節に訪れても非常に美しい庭園ですが、冬に訪れると北陸の冬の風物詩である雪吊りを見ることが出来ます。庭園内の雪釣りを施された唐崎松はとても素晴らしい姿です。また、一年を通して様々な草花や野鳥を見ることができるのも兼六園の魅力です。
+        </p>
+      </div>
+    </section>
+    <section class = "kanazawa_img3">
+      <div class="contentsKanazawa3">
+        <p class="descriptionKanazawa3">
+            加賀藩を治めた前田家を象徴する金沢城のある金沢城公園は、桜シーズンに訪れるのがおすすめです。ソメイヨシノをはじめとした桜が多くあり、花見を存分に楽しむことが出来ます。周辺のカフェでゆったりと過ごすのもおすすめです。また、金沢城公園から香林坊や片町といった繁華街が近く、そこでは金沢のグルメを堪能することもできます。
+        </p>
+        <img src="./assets/img/kanazawa/金沢城＿桜.jpg" alt="">
+      </div>
+    </section>
+    <section class = "kanazawa_access"></section>
+  </div>
+
+  <div id="hiroshima-content" class="content">
+    <section class = "hiroshima_map">
+      <img src="./assets/img/maps/hiroshimaStampPicture.png" alt="">
+      <div class="favorite4">
+        <h1>好きな街　其ノ肆</h1>
+        <p class="descriptionHiroshima0">地元広島は思い出の詰まった街です。宮島や原爆ドームといった世界遺産だけでなく、あまり知られていないだけで魅力的な場所もたくさんあります。悲惨な歴史があり世界平和を象徴する街として世界に知られていますが、自然豊かな街でもあります。愛媛へと通じるしまなみ海道や呉の島々をつなぐとびしま海道など絶景スポットが数多くあります。</p>
+      </div>
+      </section>
+    <section class = "hiroshima_img1">
+      <div class="contentsHiroshima1">
+        <p class="descriptionHiroshima1">
+          広島といえばやはり、「広島東洋カープ」の本拠地マツダスタジアムでビール片手に野球観戦が最高です。新幹線の通っている広島駅から歩いて10分程度と、全国一と言っていいほど好立地なスタジアムです。
+          また、プロサッカーチームの「サンフレッチェ広島」は2024年にサッカー専用のスタジアム「エディオンピースウィング広島」を本拠地としており、サッカーも盛んで熱い街となっています。
+        </p>
+        <img src="./assets/img/hiroshima/マツダスタジアム3.jpg" alt="">
+      </div>
+    </section>
+    <section class = "hiroshima_img2">
+      <div class="contentsHiroshima2">
+        <img src="./assets/img/hiroshima/宮島花火.jpg" alt="">
+          <p class="descriptionHiroshima2">
+            日本三景の一つとして知られる宮島は、厳島神社の鳥居をシンボルとして絶景を見せてくます。そしてアナゴ飯やもみじ饅頭をはじめ、美味しいグルメを堪能することができます。
+            また、宮島はしゃもじが有名ですが、日清・日露戦争時に広島の宇品港から兵隊が出征する際、「敵をめしとる」という言葉にかけて無事を祈願していた背景があり、広島がかつて軍都であった歴史を感じさせます。                
+          </p>
+      </div>
+    </section>
+    <section class = "hiroshima_img3">
+      <div class="contentsHiroshima3">
+        <p class="descriptionHiroshima3">
+          大小7つの島をつなぐ「とびしま海道」ではスカイブルーの海を見渡すことができます。晴れた日の「とびしま海道」でのドライブ、サイクリングは最高です。呉市から橋を渡ると愛媛県今治市の島まで渡ることができ、途中の島では、江戸時代から明治時代にかけて北前船が停泊する港街として栄えたエリアがあります。自然と歴史を感じることのできる魅力の詰まった海道です。
+        </p>
+        <img src="./assets/img/hiroshima/御手洗＿神社.jpg" alt="">
+      </div>
+    </section>
+    <section class = "hiroshima_access"></section>
+  </div>
+
+  <div id="wakayama-content" class="content">
+    <section class = "wakayama_map">
+      <img src="./assets/img/maps/wakayamaStampPicture.png" alt="">
+      <div class="favorite5">
+        <h1>好きな街　其ノ伍</h1>
+        <p class="descriptionWakayama0">和歌山には非常に多くの観光スポットがあります。高野山に白浜、熊野三山や串本など景色、温泉、グルメ、歴史と幾多の楽しみ方があります。特に海産物が多く採れ、勝浦で水揚げされた生マグロは絶品です。また、串本町には日本初の民間ロケット発射場があり、ロケット打ち上げの試みが行われています。</p>
+      </div>
+    </section>
+    <section class = "wakayama_img1">
+      <div class="contentsWakayama1">
+        <p class="descriptionWakayama1">
+          和歌山の山奥に車を走らせると温泉郷へ辿り着きます。温泉郷の一つ、湯の峰温泉にはその時々で色が変わる「つぼ湯」があります。温泉に浸かるまで湯がどのような色か分からず、とてもワクワクします。また近くの川湯温泉には仙人風呂があり、川の中に入って温泉に浸かるという貴重な体験ができます。
+        </p>
+        <img src="./assets/img/wakayama/つぼ湯.jpg" alt="">
+      </div>
+    </section>
+    <section class = "wakayama_img2">
+      <div class="contentsWakayama2">
+        <img src="./assets/img/wakayama/白浜＿夕方.jpg" alt="">
+          <p class="descriptionWakayama2">
+            真っ白な砂浜にエメラルドグリーンの海が広がる白浜は関西を代表するビーチです。白浜で眺めるビーチは言葉にし難いほどの美しさです。
+            また温泉地として有名な白浜には、太平洋が間近に迫る崎の湯温泉があります。岩に波が打ち寄せ、波の音を楽しみながらゆっくりと湯に浸かることができます。そして周辺にも歴史を持った多数の温泉が存在します。
+              
+          </p>
+      </div>
+    </section>
+    <section class = "wakayama_img3">
+      <div class="contentsWakayama3">
+        <p class="descriptionWakayama3">
+          熊野本宮大社、熊野速玉大社、熊野那智大社からなる熊野三山には、サッカー日本代表のエンブレムでお馴染みの八咫烏の伝説があります。八咫烏は初代天皇を熊野から奈良の橿原に導いたとされ、勝利を導く守り神として親しまれています。また、熊野那智大社にある那智の滝は日本三名瀑に数えられ、迫力に圧倒されます。
+        </p>
+        <img src="./assets/img/wakayama/那智の滝.jpg" alt="">
+      </div>
+    </section>
+    <section class = "wakayama_access"></section>
+  </div>
+    <div class="line2"></div>
+    <section class = "slideshowAll">
+      <div class="wrap">
+      <ul class="show">
+        <li class="abcde">
+          <img src="./assets/img/kyoto/渡月橋2.jpg" class="kyotoSlide" alt="">
+        </li>
+        <li class="abcde">
+          <img src="./assets/img/nara/平城宮跡.jpg" class="naraSlide" alt="">
+        </li>
+        <li class="abcde">
+          <img src="./assets/img/kanazawa/Square.兼六園4.jpg" class="kanazawaSlide" alt="">
+        </li>
+        <li class="abcde">
+          <img src="./assets/img/hiroshima/蒲刈町.jpg" class="hiroshimaSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/wakayama/橋杭岩.jpg" class="wakayamaSlide" alt="">
+        </li>
+      </ul>
+      <ul class="show">
+        <li class="abcde">
+            <img src="./assets/img/kyoto/渡月橋2.jpg" class="kyotoSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/nara/平城宮跡.jpg" class="naraSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/kanazawa/Square.兼六園4.jpg" class="kanazawaSlide" alt="">
+        </li>
+        <li class="abcde">
+          <img src="./assets/img/hiroshima/蒲刈町.jpg" class="hiroshimaSlide" alt="">
+        </li>
+        <li class="abcde">
+          <img src="./assets/img/wakayama/橋杭岩.jpg" class="wakayamaSlide" alt="">
+        </li>
+      </ul>
+      <ul class="show">
+        <li class="abcde">
+            <img src="./assets/img/kyoto/渡月橋2.jpg" class="kyotoSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/nara/平城宮跡.jpg" class="naraSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/kanazawa/Square.兼六園4.jpg" class="kanazawaSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/hiroshima/蒲刈町.jpg" class="hiroshimaSlide" alt="">
+        </li>
+        <li class="abcde">
+            <img src="./assets/img/wakayama/橋杭岩.jpg" class="wakayamaSlide" alt="">
+        </li>
+      </ul>
+      </div>
+    </section>
+    <div class="shoukaiButton">
+      <div class="line3"></div>
+      <div class="button0">
+        <button class="button"><img class ="buttonImg" src="./assets/img/profile/button2/btn045_10.png" alt=""></button>
+      </div>
+    </div>
+    <section id="introduction" class="profile ">
+      <div class="profile0">
+        <div class="profile1">
+          <div class="profilePicture">
+          <img src="./assets/img/profile/profilePicture_squareBig.jpg" alt="">
           </div>
-          <div class="profile2">
-            <h2>自己紹介</h2>
-            <div class="shoukaibun">
-              <div class="shoukai1">
-                <p>広島市出身</p>
+          <div class="name">
+              <p>齊藤 秀太</p>
+            </div>
+            <div class="furigana">
+              <p>（さいとう しゅうた）</p>
+            </div>
+        </div>
+        <div class="profile2">
+          <h2>自己紹介</h2>
+          <div class="shoukaibun">
+            <div class="shoukai1">
+              <p>広島市出身</p>
+            </div>
+            <div class="shoukai2">
+              <p>セブでプログラミングを学ぶ</p>
+            </div>
+            <div class="shoukai3">
+                <p>エンジニアの卵</p>
               </div>
-              <div class="shoukai2">
-                <p>セブでプログラミングを学ぶ</p>
-              </div>
-              <div class="shoukai3">
-                  <p>エンジニアの卵</p>
-                </div>
-              <div class="shoukai4">
-                <p>趣味は旅</p>
-              </div>
-              <div class="shoukai5">
-                <p>レンタカーで各地をまわるのが大好き！</p>
-              </div>
+            <div class="shoukai4">
+              <p>趣味は旅</p>
             </div>
-          </div>
-          <div class="profile3">
-            <h2>学習中</h2>
-            <div class="learn1">
-              <p>HTML</p>
-            </div>
-            <div class="learn2">
-              <p>CSS</p>
-            </div>
-            <div class="learn3">
-              <p>JavaScript</p>
-            </div>
-            <div class="learn4">
-              <p>jQuery</p>
-            </div>
-            <div class="learn5">
-              <p>PHP</p>
+            <div class="shoukai5">
+              <p>レンタカーで各地をまわるのが大好き！</p>
             </div>
           </div>
         </div>
-        <div class="line4"></div>
-      </section>
-    </main>
+        <div class="profile3">
+          <h2>学習中</h2>
+          <div class="learn1">
+            <p>HTML</p>
+          </div>
+          <div class="learn2">
+            <p>CSS</p>
+          </div>
+          <div class="learn3">
+            <p>JavaScript</p>
+          </div>
+          <div class="learn4">
+            <p>jQuery</p>
+          </div>
+          <div class="learn5">
+            <p>PHP</p>
+          </div>
+        </div>
+      </div>
+      <div class="line4"></div>
+    </section>
+  </main>
   <footer>
     <div id= logoStamp>
     <img src="./assets/img/stamps/いいとこ発見_bigger.png" alt="">
