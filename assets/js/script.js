@@ -64,14 +64,14 @@ window.addEventListener("hashchange", function () {
 
  
 function bokashi0(machi) {
-  var bokashi = document.querySelectorAll(".bokashi");
+  var bokashi = document.querySelectorAll(".circle-buttons__image");
   bokashi.forEach(function (bokashi){
-    bokashi.classList.remove("choice");
+    bokashi.classList.remove("circle-buttons__image--active");
   });
 
   var selectedBokashi = document.getElementById(machi);
   if(selectedBokashi) {
-    selectedBokashi.classList.add("choice");
+    selectedBokashi.classList.add("circle-buttons__image--active");
   };
 }
 
@@ -94,23 +94,6 @@ window.addEventListener("DOMContentLoaded", function () {
   profileShuta();
 });
 
-// function profileShuta() {
-//   let profileX = document.getElementById("introduction");
-//   let buttonX = document.querySelector(".buttonImg");
-//   console.log(buttonX);
-//   buttonX.document.addEventListener("click", function(){
-//     console.log("ryukiSama");
-//     if(!profileX.classList.contains(
-//       "active")){
-//         profileX.classList.add("active");}
-//         else{profileX.classList.remove("active");}
-//   });
-// }
-
-  // $(function(){
-  //     $(".button").on("click", function(){
-  //       $(".profile").toggle();
-  //     });
 $(document).ready(function() {
 var pagetop = $('.pagetop');
 $(window).scroll(function () {
