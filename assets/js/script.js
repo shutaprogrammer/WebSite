@@ -31,18 +31,18 @@ function showContent(city) {
   // すべてのコンテンツを非表示
   var contents = document.querySelectorAll(".content");
   contents.forEach(function (content){
-    content.classList.remove("active");
+    content.classList.remove("content--active");
   });
 
     //選択されたコンテンツを表示
     var selectedContent = document.getElementById(city);
     if (selectedContent) {
-      selectedContent.classList.add("active");
+      selectedContent.classList.add("content--active");
     }
     // URLのハッシュを更新
     window.location.hash = city;
 
-    bokashi0(city+"Bokashi");
+    bokashi0(city+"-bokashi");
 }
 
 // ページ読み込み時にハッシュをチェックして表示
